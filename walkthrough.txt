@@ -1,0 +1,38 @@
+a CRUD application - user management system to manage the user 
+
+
+Create - form to create a new user
+Read - read from the mongodb database on the UI of the app
+Update - edit button
+Delete - delete button
+
+tech stack- 
+node
+express
+mongo
+api (create)
+how to make the ajax req.
+ejs
+http methods
+
+project structure-
+assets - 
+css - styling
+img - image used in the application
+js - client-side js logic code
+----------------------------------------
+views-
+ejs html - dynamic html templates(frontend) - default view engine for express
+----------------------------------------
+server-
+server-side logic code
+<mvc> pattern
+model - mongodb data processing
+controller - user req. for resources from the server , (will send resources to the user)
+database - for database connection
+routes
+services
+
+
+**create the http server(in app.js)
+
