@@ -35,4 +35,8 @@ services
 
 
 **create the http server(in app.js)
+express
+dotenv -- this mod. helps in collaborative env. which lets your SC to be shared but not your credentials(port, auth etc)
+config.env -- file created
+morgan - this mod. helps to show the req. log in console
 
