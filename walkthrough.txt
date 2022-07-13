@@ -40,3 +40,14 @@ dotenv -- this mod. helps in collaborative env. which lets your SC to be shared 
 config.env -- file created
 morgan - this mod. helps to show the req. log in console
 
+
+**create module(in app.js)
+body-parser
+ejs -- setting the view-engine to ejs
+loading the assets -- static folders(js,img,css etc)
+
+
+**creating the views
+
+
+
