@@ -56,7 +56,11 @@ header and footer are separtaed and included in the main "index.ejs" file
 creating the main html section + adding form handling section(table,header)
 
 
-**styling the html{the above}()
+**styling the html{the above}(assets/style.css)
+using variable 
+
+
+**responsive table&forms
 
 
 
