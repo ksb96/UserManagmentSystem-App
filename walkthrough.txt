@@ -49,6 +49,15 @@ loading the assets -- static folders(js,img,css etc)
 
 **creating the views(index.ejs)
 on app.js, we use the res.render() -- which render html file.
+header and footer are separtaed and included in the main "index.ejs" file
+
+
+**creating the main body-main section(in index.ejs)
+creating the main html section + adding form handling section(table,header)
+
+
+**styling the html{the above}()
+
 
 
 
