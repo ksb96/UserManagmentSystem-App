@@ -16,7 +16,7 @@ app.use(morgan(`tiny`));
 app.use(bodyparser.urlencoded({ extended: true}))
 
 //set view-engine(EJS)
-app.set("view-engine", "ejs")
+app.set('view engine', '.ejs') //upto date syntax for ejs(must follow)
 // app.set("views",path.resolve(__dirname,"views/ejs"))
 
 //load assets(static folder)
@@ -26,7 +26,7 @@ app.use('/js', express.static(path.resolve(__dirname, "assets/js")))
 
 
 app.get('/', (req,res) =>{
-    res.send('crud application running');
+    res.render('index');
 })
 
 app.listen(PORT, ()=>{

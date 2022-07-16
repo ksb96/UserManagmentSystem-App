@@ -47,7 +47,8 @@ ejs -- setting the view-engine to ejs
 loading the assets -- static folders(js,img,css etc)
 
 
-**creating the views
+**creating the views(index.ejs)
+on app.js, we use the res.render() -- which render html file.
 
 
 
