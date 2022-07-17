@@ -34,6 +34,11 @@ app.get('/add-user', (req,res) =>{
     res.render('add_user');
 })
 
+//update user 
+app.get('/update_user', (req,res) =>{
+    res.render('update_user');
+})
+
 app.listen(PORT, ()=>{
     console.log(`Server is running on http://localhost:${PORT}`)
 });
