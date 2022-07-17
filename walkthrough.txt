@@ -64,5 +64,5 @@ using variable
 creating the new user file(form) in '_form.ejs' file
 
 
-
+**creating routes--server-side()
 
