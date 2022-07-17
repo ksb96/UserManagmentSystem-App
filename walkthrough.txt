@@ -60,7 +60,8 @@ creating the main html section + adding form handling section(table,header)
 using variable 
 
 
-**responsive table&forms
+**responsive table&forms(add_user.ejs)&(_form.ejs)
+creating the new user file(form) in '_form.ejs' file
 
 
 
