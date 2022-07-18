@@ -72,3 +72,11 @@ create a new file "router.js" in routes folder
 On services/render.js (to render-change)
 separate the diff.routes logic(from routes.js) into the the render.js file
 
+
+**mongodb
+cluster - manages your data(in cloud)
+on database folder create a file 'connection.js' to make connection with mongodb database
+update on the app.js file with 'connectDB()' and require the 'connection.js' mod file
+
+
+**api
