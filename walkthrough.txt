@@ -67,3 +67,8 @@ creating the new user file(form) in '_form.ejs' file
 **creating routes--server-side(routes/router.js)
 create a new file "router.js" in routes folder
 "const route = express.Router()" - creates diff. routes(http req/res) in a separate file
+
+*separate callback function(from router.js)
+On services/render.js (to render-change)
+separate the diff.routes logic(from routes.js) into the the render.js file
+
