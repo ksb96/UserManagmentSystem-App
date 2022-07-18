@@ -64,5 +64,6 @@ using variable
 creating the new user file(form) in '_form.ejs' file
 
 
-**creating routes--server-side()
-
+**creating routes--server-side(routes/router.js)
+create a new file "router.js" in routes folder
+"const route = express.Router()" - creates diff. routes(http req/res) in a separate file
