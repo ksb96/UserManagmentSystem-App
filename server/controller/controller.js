@@ -30,7 +30,8 @@ exports.create = (req,res)=>{
 
 //retrieve and return users/same for single user too (GET)
 exports.find = (req,res)=>{
-    userDb.find().then(user=>{
+    //find, findOne/byID
+    userDb.findOne().then(user=>{
         res.send(user)
     }).catch(err=>{
         res.status(500).send({

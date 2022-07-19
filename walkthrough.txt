@@ -98,3 +98,5 @@ delete (delete)
 
 
 **find&update(controller.js)
+finding the data(user) from the db with 'findOne' method
+*update
