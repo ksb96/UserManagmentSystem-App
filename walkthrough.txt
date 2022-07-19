@@ -92,5 +92,9 @@ delete (delete)
 
 
 **Create api (controller.js)
+1)validating the req, if the request is empty it cannot be send to DB
+2) if req. body is not empty then user will be created as per the schema.
+3) after the create user schema, the data will be send to db & saved(mongodb)
 
 
+**find&update(controller.js)

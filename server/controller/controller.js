@@ -1,7 +1,7 @@
 let userDb = require('../model/model');
 
 //api's
-//create & save, new user 
+//create & save, new user (POST)
 exports.create = (req,res)=>{
         // validate request
         if(!req.body){
@@ -28,17 +28,23 @@ exports.create = (req,res)=>{
             });
 }
 
-//retrieve and return all users/same for single user too
+//retrieve and return users/same for single user too (GET)
 exports.find = (req,res)=>{
-
+    userDb.find().then(user=>{
+        res.send(user)
+    }).catch(err=>{
+        res.status(500).send({
+            message:err.message || "It's not you its us, Sorry"
+        })
+    })
 }
 
-//update the user with ID's
+//update the user with ID's (PUT)
 exports.update = (req,res)=>{
 
 }
 
-//delete user with ID
+//delete user with ID (DELETE)
 exports.delete = (req,res)=>{
 
 }
