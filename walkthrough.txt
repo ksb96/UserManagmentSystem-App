@@ -76,7 +76,16 @@ separate the diff.routes logic(from routes.js) into the the render.js file
 **mongodb
 cluster - manages your data(in cloud)
 on database folder create a file 'connection.js' to make connection with mongodb database
-update on the app.js file with 'connectDB()' and require the 'connection.js' mod file
 
 
-**api
+**api (model/model.js)
+create a schema for the db- structure(model.js)
+Now, 
+create a 'controller.js' file which will help to control the user action in the app(select, update, delete, find)
+On controller.js file
+(api creation - start)
+On routes.js(import the api routes)
+post (create)
+get (find)
+put (update)
+delete (delete)
