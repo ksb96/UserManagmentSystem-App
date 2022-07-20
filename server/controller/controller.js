@@ -31,7 +31,24 @@ exports.create = (req,res)=>{
 
 //retrieve and return users/same for single user too (GET)
 exports.find = (req,res)=>{
-    //find - all data, findOne/byID
+    if(req.query.id){
+        const id = req.query.id;
+    //single user 
+    userDb.findById(id).then(data =>{
+        if(!data){
+            res.status(404).send({
+                message: `User data not found!!!  ${id}`
+            })
+        }else{
+            res.send(data)
+        }
+    }).catch(err=>{
+        res.status(500).send({
+            message: err.message || `Unexpected error from our end, tbh!!!  ${id}`
+        })
+    })
+    }else{
+    //find - all
     userDb.find().then(user=>{
         res.send(user)
     }).catch(err=>{
@@ -39,6 +56,7 @@ exports.find = (req,res)=>{
             message:err.message || "It's not you its us, Sorry"
         })
     })
+    }
 }
 
 //update the user with ID's (PUT)
