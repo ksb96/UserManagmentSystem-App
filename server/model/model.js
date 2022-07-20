@@ -14,6 +14,6 @@ let schema = new mongoose.Schema({
     status: String
 })
 
-const userDb = mongoose.model('empdb', schema);
+const userDb = mongoose.model('empdbs', schema);
 
 module.exports = userDb;

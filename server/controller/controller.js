@@ -5,7 +5,8 @@ let userDb = require('../model/model');
 exports.create = (req,res)=>{
         // validate request
         if(!req.body){
-            res.status(400).send({ message : "Content can not be emtpy!"});
+            res.status(400).send({ 
+                message : "Content can not be emtpy!"});
             return;
         }
     
@@ -30,8 +31,8 @@ exports.create = (req,res)=>{
 
 //retrieve and return users/same for single user too (GET)
 exports.find = (req,res)=>{
-    //find, findOne/byID
-    userDb.findOne().then(user=>{
+    //find - all data, findOne/byID
+    userDb.find().then(user=>{
         res.send(user)
     }).catch(err=>{
         res.status(500).send({
@@ -67,5 +68,20 @@ exports.update = (req,res)=>{
 
 //delete user with ID (DELETE)
 exports.delete = (req,res)=>{
-
+    const id = req.params.id;
+    userDb.findByIdAndDelete(id).then(data => {
+            if(!data){
+                res.status(404).send({ 
+                    message : `Cannot Delete with id ${id}. Maybe id is wrong`})
+            }else{
+                res.send({
+                    message : "User was deleted successfully!"
+                })
+            }
+        })
+        .catch(err =>{
+            res.status(500).send({
+                message: err.message || `Could not delete user with id = ${id}`
+            });
+        });
 }

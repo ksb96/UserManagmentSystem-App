@@ -100,3 +100,13 @@ delete (delete)
 **find&update(controller.js)
 finding the data(user) from the db with 'findOne' method
 *update
+update the user with ID's (PUT)
+storing the ID value in a var 'ID'(using params method)
+
+
+**delete by ID(controller.js)
+storing the ID value in a var 'ID'(using params method)
+then using 'findByIdAndDelete' method on data(ID) to delete
+
+
+**GET single user
