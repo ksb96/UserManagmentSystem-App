@@ -113,3 +113,8 @@ then using 'findByIdAndDelete' method on data(ID) to delete
 accessing the 'id'(of a URL) with 'query.id' statement and then store the value of the 'id' in "id var" 
 and then
 pass the value to 'findById() method'
+
+
+**Create new user(from frontend)
+rendering the 'add_user.ejs' file
+action="/api/users"(_form.ejs) a POST is send(when Save btn is pressed), this request is matched with the POST api request(on the route.js), if matched then it will save the request in the mongodb  
