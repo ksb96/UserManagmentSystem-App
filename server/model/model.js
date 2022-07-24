@@ -10,10 +10,11 @@ let schema = new mongoose.Schema({
         required: true,
         unique: true
     },
-    gender: String,
+    gender: {
+        type: String,
+        required: true
+    },
     status: String
 })
 
-const userDb = mongoose.model('empdbs', schema);
-
-module.exports = userDb;
+module.exports = mongoose.model('empdbs', schema);
