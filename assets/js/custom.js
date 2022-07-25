@@ -24,7 +24,6 @@ $("#update_user").submit(function(event){
 
     $.ajax(request).done((response) =>{
         alert("Data Updated Successfully!");
-        // location.reload();
     })
 })
 

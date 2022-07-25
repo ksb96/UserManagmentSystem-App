@@ -40,6 +40,7 @@ exports.find = (req, res) => {
                     })
                 } else {
                     res.send(data)
+                    // res.redirect('/update-user');
                 }
             }).catch(err => {
                 res.status(500).send({
