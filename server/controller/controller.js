@@ -1,4 +1,4 @@
-let userDb = require('../model/model');
+var Userdb = require('../model/model');
 
 //api's
 //create & save, new user (POST)
@@ -12,7 +12,7 @@ exports.create = (req, res) => {
     }
 
     // create new user
-    const user = new userDb({
+    var user = new Userdb({
         name: req.body.name,
         email: req.body.email,
         gender: req.body.gender,
@@ -20,8 +20,7 @@ exports.create = (req, res) => {
     })
     // save user in the database
     user.save(user).then(data => {
-            res.send(data)
-          res.redirect('/add_user');
+          res.redirect('/add-user');
         }).catch(err => {
             res.status(500).send({
                 message: err.message || "Some error occurred while creating a create operation"
@@ -34,7 +33,7 @@ exports.find = (req, res) => {
 
     if (req.query.id) {
         const id = req.query.id;
-        userDb.findById(id).then(data => {
+        Userdb.findById(id).then(data => {
                 if (!data) {
                     res.status(404).send({
                         message: `User data not found!!! ${id}`
@@ -42,14 +41,13 @@ exports.find = (req, res) => {
                 } else {
                     res.send(data)
                 }
-            })
-            .catch(err => {
+            }).catch(err => {
                 res.status(500).send({
                     message: err.message || `Unexpected error from our end, tbh!! ${id}`
                 })
             })
     } else {
-        userDb.find().then(user => {
+        Userdb.find().then(user => {
                 res.send(user)
             }).catch(err => {
                 res.status(500).send({
@@ -69,7 +67,7 @@ exports.update = (req, res) => {
     }
     //storing in var 'ID'
     const id = req.params.id;
-    userDb.findByIdAndUpdate(id, req.body, {
+    Userdb.findByIdAndUpdate(id, req.body, {
         useFindAndModify: false
     }).then(data => {
         if (!data) {
@@ -89,7 +87,7 @@ exports.update = (req, res) => {
 //delete user with ID (DELETE)
 exports.delete = (req, res) => {
     const id = req.params.id;
-    userDb.findByIdAndDelete(id).then(data => {
+    Userdb.findByIdAndDelete(id).then(data => {
             if (!data) {
                 res.status(404).send({
                     message: `Cannot Delete with id ${id}. Maybe id is wrong`
