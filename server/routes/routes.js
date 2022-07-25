@@ -12,7 +12,7 @@ route.get('/', services.homeRoutes);
 /** @desc add_users page
  *  @method /GET /add_user
  */
-route.get('/add-user', services.add_user);
+route.get('/add_user', services.add_user);
 
 /** @desc update_user page
  *  @method /POST /update_user
