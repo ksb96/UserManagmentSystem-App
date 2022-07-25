@@ -21,7 +21,7 @@ exports.create = (req, res) => {
     // save user in the database
     user.save(user).then(data => {
             res.send(data)
-          //res.redirect('/add-user');
+          res.redirect('/add_user');
         }).catch(err => {
             res.status(500).send({
                 message: err.message || "Some error occurred while creating a create operation"

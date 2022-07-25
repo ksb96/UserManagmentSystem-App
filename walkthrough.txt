@@ -120,3 +120,6 @@ rendering the 'add_user.ejs' file
 action="/api/users"(_form.ejs) a POST is send(when Save btn is pressed), this request is matched with the POST api request(on the route.js), if matched then it will save the request in the mongodb  
 
 *To add custom text msg, using jquery(_footer.ejs)
+
+
+**Update User
