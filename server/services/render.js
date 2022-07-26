@@ -1,5 +1,6 @@
 const axios = require('axios');
 
+//root
 exports.homeRoutes = (req,res)=>{
     //GET request to /api/users
     axios.get('https://umanagmentapp.herokuapp.com/api/users').then((response)=>{
@@ -10,10 +11,23 @@ exports.homeRoutes = (req,res)=>{
     })
 }
 
+//add new user
 exports.add_user = (req,res)=>{
+    axios.get('https://umanagmentapp.herokuapp.com/api/users',{
+        params:{
+            id:req.query.id
+        }
+    }).then((adddata)=>{
+        res.render('add_user',{
+            add:adddata.data
+        })
+    }).catch(err=>{
+        res.send(err);
+    })
     res.render('add_user');
 }
 
+//update user
 exports.update_user = (req,res)=>{
     axios.get('https://umanagmentapp.herokuapp.com/api/users', {
         params: {
