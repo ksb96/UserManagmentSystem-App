@@ -40,7 +40,7 @@ exports.find = (req, res) => {
                     })
                 } else {
                     res.send(data)
-                    // res.redirect('/update-user');
+                    res.redirect('/update-user');
                 }
             }).catch(err => {
                 res.status(500).send({
@@ -58,12 +58,12 @@ exports.find = (req, res) => {
     }
 }
 
-//update the user with ID's (PUT)
+// //update the user with ID's (PUT)
 exports.update = (req, res) => {
     //no data
     if (!req.body) {
         return res.status(400).send({
-            message: "data for update cannot be empty"
+            message: "Data for update cannot be empty"
         })
     }
     //storing in var 'ID'
