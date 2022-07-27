@@ -1,5 +1,5 @@
 # User Management System - App
-A demonstation of CRUD application.
+A demonstration of CRUD application.
 
 # Tech Stack -
 1) NodeJS

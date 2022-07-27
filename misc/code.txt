@@ -1,0 +1,20 @@
+update_user.ejs
+<%= user.gender == 'Male' ? 'checked' : '' %> 
+<%= user.gender == 'Female' ? 'checked' : '' %> 
+<%= user.status == 'Active' ? 'checked' : '' %>
+<%= user.status == 'Inactive' ? 'checked' : '' %>
+
+Local URLs
+On render.js & custom.js
+http://localhost:3000/api/users
+
+
+heroku deployment steps- 
+1) on the terminal, heroku login -i
+2) cd {project dir}
+3) git init
+4) heroku create umanagmentapp
+5) (create a .gitignore file in the project root dir. and type inside the file "/node_modules")
+6) git add .
+7) git commit -m "My first commit"
+8) git push heroku master
