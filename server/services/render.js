@@ -2,7 +2,7 @@ const axios = require('axios');
 
 //root
 exports.homeRoutes = (req, res) => {
-    axios.get('http://localhost:3000/api/users')
+    axios.get('https://umanagmentapp.herokuapp.com/')
         .then(function (response) {
             res.render('index', {
                 users: response.data
@@ -19,7 +19,7 @@ exports.add_user = (req, res) => {
 
 //update
 exports.update_user = (req, res) => {
-    axios.get('http://localhost:3000/api/users', {
+    axios.get('https://umanagmentapp.herokuapp.com/api/users', {
             params: {
                 id: req.query.id
             }

@@ -4,9 +4,11 @@ const morgan = require('morgan');
 const bodyparser = require('body-parser');
 const path = require('path');
 const favicon = require('serve-favicon');
+const cors = require('cors');
 
 const connectDB = require('./server/database/connection');
 
+//init app
 const app = express();
 
 dotenv.config({ path:'config.env'})
@@ -35,6 +37,25 @@ app.use('/js', express.static(path.resolve(__dirname, "assets/js")))
 //load routes
 app.use('/', require('./server/routes/routes'))
 
+//cors
+const corsResolve = {
+    origin: 'https://umanagmentapp.herokuapp.com/',
+  
+    methods: [
+      'GET',
+      'POST',
+      'PUT',
+      'DELETE'
+    ],
+  
+    allowedHeaders: [
+      'Content-Type',
+    ],
+  };
+  
+  app.use(cors(corsResolve));
+  
+
 app.listen(PORT, ()=>{
-    console.log(`Server is running on http://localhost:${PORT}`)
+    console.log(`Server is running`)
 });
