@@ -2,14 +2,13 @@ const axios = require('axios');
 
 //root
 exports.homeRoutes = (req, res) => {
-    axios.get('https://umanagmentapp.herokuapp.com/')
-        .then(function (response) {
-            res.render('index', {
-                users: response.data
-            });
-        }).catch(err => {
-            res.send(err);
-        })
+    axios.get('https://umanagmentapp.herokuapp.com/api/users').then(function (response) {
+        res.render('index', {
+            users: response.data
+        });
+    }).catch(err => {
+        res.send(err);
+    })
 }
 
 //add
@@ -20,14 +19,14 @@ exports.add_user = (req, res) => {
 //update
 exports.update_user = (req, res) => {
     axios.get('https://umanagmentapp.herokuapp.com/api/users', {
-            params: {
-                id: req.query.id
-            }
-        }).then(function (userdata) {
-            res.render("update_user", {
-                user: userdata.data
-            })
-        }).catch(err => {
-            res.send(err);
+        params: {
+            id: req.query.id
+        }
+    }).then(function (userdata) {
+        res.render("update_user", {
+            user: userdata.data
         })
+    }).catch(err => {
+        res.send(err);
+    })
 }
