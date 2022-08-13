@@ -10,10 +10,7 @@ let schema = new mongoose.Schema({
         required: true,
         unique: true
     },
-    gender: {
-        type: String,
-        required: true
-    },
+    gender: String,
     status: String
 })
 

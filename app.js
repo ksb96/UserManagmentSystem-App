@@ -26,7 +26,6 @@ app.use(bodyparser.urlencoded({ extended: true}))
 
 //set view-engine(EJS)
 app.set('view engine', '.ejs') //upto date syntax for ejs(must follow)
-// app.set("views",path.resolve(__dirname,"views/ejs"))
 
 //load assets(static folder)
 app.use('/css', express.static(path.resolve(__dirname, "assets/css")))
