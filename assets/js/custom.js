@@ -15,7 +15,7 @@ $("#update_user").submit(function(event){
     })
 
     var request = {
-        "url" : `https://umanagmentapp.herokuapp.com/api/users/${data.id}`,
+        "url" : `https://umanagmentapp.herokuapp.com/update-user?id=${data.id}`,
         "method" : "PUT",
         "data" : data
     }
